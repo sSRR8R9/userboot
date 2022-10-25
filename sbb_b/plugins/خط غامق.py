@@ -2,7 +2,7 @@
 # © matrix Team 2023
 # ها شعدك داخل ع الملف تريد تخمط ؟ ابو زربة لهل درجة فاشل  
 from telethon import events
-from sbb_b import razan
+from jepthon import jepiq
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from ..core.managers import edit_delete
 from telethon import functions
