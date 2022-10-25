@@ -260,7 +260,7 @@ async def verifyLoggerGroup():
         descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
         photobt = await sbb_b.upload_file(file="razan/pic/IMG_20220905_203827_263.jpg")
         _, groupid = await create_supergroup(
-            "كروب بوت ماتركس", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة اشعارات ماتركس", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("تم انشاء كروب الحفظ بنجاح")
