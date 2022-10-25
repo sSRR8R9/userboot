@@ -1,6 +1,7 @@
 # =============================
-# | MQQDD - ZBBBBB - VV744    |
+# |         Zbbbbb - ZBbbbb - VV744           |
 # =============================
+
 import os
 
 from telegraph import exceptions, upload_file
