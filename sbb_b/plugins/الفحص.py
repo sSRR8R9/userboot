@@ -100,12 +100,12 @@ async def repo(event):
     await response[0].click(event.chat_id)
     await event.delete()
 
-ROZ_PIC = "https://telegra.ph/file/5f6ef13851dcf0d6fc72b.jpg"
+ROZ_PIC = "https://telegra.ph/file/215f6f2bcd2e1ac92ee15.jpg"
 RAZAN = Config.TG_BOT_USERNAME
 ROZ_T = (
-    f"**⌯︙بوت مآتركس يعمل بنجاح 🤍،**\n"
+    f"**⌯︙بوت مـاتركس يعمل بنجاح 🤍،**\n"
     f"**   - اصدار التليثون :** `1.23.0\n`"
-    f"**   - اصدار مآتركس :** `4.0.0`\n"
+    f"**   - اصدار مـاتركس :** `4.0.0`\n"
     f"**   - البوت المستخدم :** `{RAZAN}`\n"
     f"**   - اصدار البايثون :** `3.9.6\n`"
     f"**   - المستخدم :** {mention}\n"
