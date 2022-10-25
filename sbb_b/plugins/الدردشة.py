@@ -91,7 +91,7 @@ async def _(event):
 async def _(event):
     user = await event.get_sender()
     if user.id == 1280124974:
-        await event.reply("اهلا بك محمد مطوري\nقناة السورس:  @jmthon")
+        await event.reply("اهلا بك محمد مطوري\nقناة السورس:  @VV744")
 
 
 @sbb_b.ar_cmd(
@@ -99,7 +99,7 @@ async def _(event):
     groups_only=True,
 )
 async def kickme(leave):
-    await leave.edit("**- حسنا الان انا سأغادر المجموعة\n مفعل جمثون اني @jmthon**")
+    await leave.edit("**- حسنا الان انا سأغادر المجموعة\n مفعل مآتركس اني @VV744**")
     await leave.client.kick_participant(leave.chat_id, "me")
 
 
