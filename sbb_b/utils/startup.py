@@ -258,9 +258,9 @@ async def verifyLoggerGroup():
             LOGS.error("هنالك خطا ما للتعرف على فار كروب الحفظ\n" + str(e))
     else:
         descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
-        photobt = await sbb_b.upload_file(file="razan/pic/Jmthonp.jpg")
+        photobt = await sbb_b.upload_file(file="razan/pic/IMG_20220905_203827_263.jpg")
         _, groupid = await create_supergroup(
-            "كروب بوت جمثون", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "كروب بوت ماتركس", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("تم انشاء كروب الحفظ بنجاح")
@@ -283,9 +283,9 @@ async def verifyLoggerGroup():
             LOGS.error("حدث خطأ اثناء التعرف على كروب التخزين\n" + str(e))
     else:
         descript = "❃ لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص"
-        photobt = await sbb_b.upload_file(file="razan/pic/Jmthonp.jpg")
+        photobt = await sbb_b.upload_file(file="razan/pic/IMG_20220905_204535_409.jpg")
         _, groupid = await create_supergroup(
-            "مجموعة التخزين", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة تخزين ماتركس", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PM_LOGGER_GROUP_ID", groupid)
         print("تم عمل الكروب التخزين بنجاح واضافة الفارات اليه.")
@@ -323,4 +323,4 @@ async def install_externalrepo(repo, branch, cfolder):
         )
     if os.path.exists(rpath):
         await runcmd(f"pip3 install --no-cache-dir -r {rpath}")
-    await load_plugins(folder="sbb_b", extfolder=cfolder)
+    await load_plugins(folder="MATRIX", extfolder=cfolder)
