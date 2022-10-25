@@ -7,7 +7,7 @@ from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from ..core.managers import edit_delete
 from telethon import functions
 
-@sbb_b.ar(admin_cmd(pattern="خط غامق"))
+@sbb_b.ar_cmd(pattern="خط غامق"))
 async def btext(event):
     isbold = gvarstatus("bold")
     if not isbold:
@@ -20,7 +20,7 @@ async def btext(event):
         await edit_delete(event, "**᯽︙ تم اطفاء الخط الغامق بنجاح ✓ **")
         return
 
-@sbb_b.ar(admin_cmd(pattern="خط رمز"))
+@sbb_b.ar_cmd(pattern="خط رمز"))
 async def btext(event):
     isramz = gvarstatus("ramz")
     if not isramz:
