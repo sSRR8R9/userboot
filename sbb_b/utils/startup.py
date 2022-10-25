@@ -25,7 +25,7 @@ from .pluginmanager import load_module
 from .tools import create_supergroup
 
 ENV = bool(os.environ.get("ENV", False))
-LOGS = logging.getLogger("اعداد جمثون")
+LOGS = logging.getLogger("اعداد ماتركس")
 cmdhr = Config.COMMAND_HAND_LER
 
 if ENV:
@@ -70,15 +70,15 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(JoinChannelRequest("@jmthon"))
+        await sbb_b(JoinChannelRequest("@VV744"))
     except BaseException:
         pass
     try:
-        await sbb_b(JoinChannelRequest("@jmthonar"))
+        await sbb_b(JoinChannelRequest("@MatrxSupport"))
     except BaseException:
         pass
     try:
-        await sbb_b(JoinChannelRequest("@QIN313I"))
+        await sbb_b(JoinChannelRequest("@JJJ33J"))
     except BaseException:
         pass
 
@@ -90,7 +90,7 @@ async def mybot():
     f"ـ {rz_ment}"
     f"⪼ هذا هو بوت خاص بـ {rz_ment} يمكنك التواصل معه هنا"
     starkbot = await sbb_b.tgbot.get_me()
-    perf = "[ جمثون ]"
+    perf = "[ ماتركس ]"
     bot_name = starkbot.first_name
     botname = f"@{starkbot.username}"
     if bot_name.endswith("Assistant"):
@@ -115,9 +115,9 @@ async def startupmessage():
         if BOTLOG:
             Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph//file/c20c4f492da1811e1bef0.jpg",
-                caption="**تم تشغيل سورس جمثون بنجاح لعرض الاوامر ارسل .الاوامر**",
-                buttons=[(Button.url("كروب المساعدة", "https://t.me/jmthon_support"),)],
+                "https://telegra.ph/file/215f6f2bcd2e1ac92ee15.jpg",
+                caption="**تم تشغيل سورس ماتركس بنجاح لعرض الاوامر ارسل .الاوامر**",
+                buttons=[(Button.url("كروب المساعدة", "https://t.me/matrxSupport"),)],
             )
     except Exception as e:
         LOGS.error(e)
