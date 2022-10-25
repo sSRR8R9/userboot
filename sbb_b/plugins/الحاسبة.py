@@ -157,4 +157,4 @@ async def _(e):
     tultd = [Button.inline(f"{x}", data=f"calc{x}") for x in m]
     lst = list(zip(tultd[::4], tultd[1::4], tultd[2::4], tultd[3::4]))
     lst.append([Button.inline("=", data="calc=")])
-    await e.edit("**الحاسبة العلمية لسورس جمثون\n @sbb_b**", buttons=lst)
+    await e.edit("**الحاسبة العلمية لسورس مآتركس\n @sbb_b**", buttons=lst)
