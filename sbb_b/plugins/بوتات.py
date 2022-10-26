@@ -5,10 +5,10 @@ from asyncio.exceptions import TimeoutError
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from jepthon import jepiq
+from sbb_b import razan
 
 # الي يخمط ويكول من كتابتي الا امه انيجه وقد اعذر من انذر
-@jepiq.on(admin_cmd(pattern="حالتي ?(.*)"))
+@sbb_b.ar(admin_cmd(pattern="حالتي ?(.*)"))
 async def _(event):
     await event.edit("**- يتم التاكد من حالتك اذا كنت محظور او لا**")
     async with bot.conversation("@SpamBot") as conv:
@@ -25,7 +25,7 @@ async def _(event):
         await event.edit(f"- {response.message.message}\n @VV744")
 
 
-@jepiq.on(admin_cmd(pattern="الاغنية ?(.*)"))
+@sbb_b.ar(admin_cmd(pattern="الاغنية ?(.*)"))
 async def _(event):
     "To reverse search music by bot."
     if not event.reply_to_msg_id:
@@ -61,7 +61,7 @@ async def _(event):
         return await event.edit("***حدث خطا ما حاول مجددا**")
 
 
-@jepiq.on(admin_cmd(pattern="ايميل وهمي(?: |$)(.*)"))
+@sbb_b.ar(admin_cmd(pattern="ايميل وهمي(?: |$)(.*)"))
 async def _(event):
     chat = "@TempMailBot"
     geez = await event.edit("**جاري انشاء بريد ...**")
@@ -74,7 +74,7 @@ async def _(event):
             await asyncio.sleep(1)
             await conv.send_message("/create")
             response = await response
-            jepiq = (response).reply_markup.rows[2].buttons[0].url
+            razan = (response).reply_markup.rows[2].buttons[0].url
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
             await geez.edit("**الغي حظر @TempMailBot  و حاول مجددا**")
@@ -152,26 +152,26 @@ async def _(event):
         else:
             await catevent.delete()
             await event.client.send_message(event.chat_id, response.message)
-@jepiq.on(admin_cmd(outgoing=True, pattern="غنيلي$"))
+@sbb_b.ar(admin_cmd(outgoing=True, pattern="غنيلي$"))
 async def jepvois(vois):
   rl = random.randint(3,267)
   url = f"https://t.me/adman0/{rl}"
   await vois.client.send_file(vois.chat_id,url,caption="⌯︙BY : @VV744💃",parse_mode="html")
   await vois.delete()
 
-@jepiq.on(admin_cmd(outgoing=True, pattern="شعر$"))
+@sbb_b.ar(admin_cmd(outgoing=True, pattern="شعر$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/L1BBBL/{rl}"
   await vois.client.send_file(vois.chat_id,url,caption="⌯︙BY : @VV744 💯",parse_mode="html")
   await vois.delete()
-@jepiq.on(admin_cmd(outgoing=True, pattern="قران$"))
+@sbb_b.ar(admin_cmd(outgoing=True, pattern="قران$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/QuraanJep/{rl}"
   await vois.client.send_file(vois.chat_id,url,caption="⌯︙BY : @VV744 🤲🏻☪️",parse_mode="html")
   await vois.delete()
-@jepiq.on(admin_cmd(outgoing=True, pattern="ثيم$"))
+@sbb_b.ar(admin_cmd(outgoing=True, pattern="ثيم$"))
 async def jepThe(theme):
   rl = random.randint(2,510)
   url = f"https://t.me/GSSSD/{rl}"
