@@ -21,4 +21,4 @@ class Development(Config):
     # لا تغيرها
     SUDO_COMMAND_HAND_LER = "."
     # رابط ملفات الاوامر الاضافيه لا تغيره
-    EXTERNAL_REPO = "https://github.com/sbb_b/JmPlugins"
+    EXTERNAL_REPO = "https://github.com/bbhh1/userboot"
